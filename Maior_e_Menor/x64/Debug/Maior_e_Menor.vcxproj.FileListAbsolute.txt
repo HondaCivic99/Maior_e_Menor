@@ -1,0 +1,2 @@
+C:\Repos\Maior_e_Menor\x64\Debug\Maior_e_Menor.exe
+C:\Repos\Maior_e_Menor\x64\Debug\Maior_e_Menor.pdb
