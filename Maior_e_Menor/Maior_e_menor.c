@@ -1,34 +1,32 @@
 #include <stdio.h>
-#include <locale.h>
 #include <stdlib.h>
-int main(void)
-{
-    long int a, b;
-    while (1)
-    {
-        setlocale(LC_ALL, "Portuguese");
-        system("cls");
-        printf("\nEntre com o primeiro número para a comparação: ");
-        scanf_s("%d", &a);
-        printf("\nEntre com o segundo número para a comparação: ");
-        scanf_s("%d", &b);
+#include <stdint.h>
+#include <locale.h>
+int main() {
+    int num1, num2;
 
-        if (a > b)
-        {
-            printf("\nO numero %d é maior que o %d", a, b);
+    while (1) {
+        setlocale(LC_ALL, "Portuguese");
+        printf("\nDigite o primeiro nÃºmero: ");
+        scanf_s("%d", &num1);
+        printf("\nDigite o segundo nÃºmero: ");
+        scanf_s("%d", &num2);
+
+        if (num1 > num2) {
+            printf("O primeiro nÃºmero Ã© maior.\n");
         }
-        else if (a == b)
-        {
-            printf("\nO Numero %d é igual ao %d", a, b);
+        else if (num2 > num1) {
+            printf("O segundo nÃºmero Ã© maior.\n");
         }
-        else if (a < b)
-        {
-            printf("\nO numero %d é menor que o %d", a, b);
+        else {
+            printf("Os nÃºmeros sÃ£o iguais.\n");
         }
-        printf("\nPressione a tecla Enter para fazer outra comparação");
-        fflush(stdin);
+
+        fflush(stdin); 
+
         getchar();
-        fflush(stdin);
+        printf("\n");
     }
+
     return 0;
 }
